@@ -1,8 +1,9 @@
 var express = require('express');
+require('dotenv').config();
 var app = express();
 
-//const MESSAGE_STYLE = process.env['MESSAGE_STYLE']
-const MESSAGE_STYLE = 'uppercase'
+const MESSAGE_STYLE = process.env['MESSAGE_STYLE']
+//const MESSAGE_STYLE = 'uppercase'
 
 app.use('/public', express.static(__dirname + '/public'))
 
