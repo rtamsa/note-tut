@@ -1,3 +1,6 @@
 [submodule "boilerplate-express"]
 	path = boilerplate-express
 	url = https://github.com/freeCodeCamp/boilerplate-express.git
+
+.env
+node_modules
