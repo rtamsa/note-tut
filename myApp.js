@@ -2,9 +2,9 @@ const bodyParser = require('body-parser');
 var express = require('express');
 require('dotenv').config();
 var app = express();
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-mongoose.connect( process.env['MONGO_URI'] || 'undefined' , { useNewUrlParser: true, useUnifiedTopology: true });
+mongoose.connect( process.env['MONGO_URI'], { useNewUrlParser: true, useUnifiedTopology: true });
 
 app.use(function(req, res, next) {
   console.log(req.method + ' ' + req.path + ' - ' + req.ip);
