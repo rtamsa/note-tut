@@ -28,10 +28,10 @@ app.get('/json', (req, res) => {
   res.json(obj)
 })
 
-app.get('/now', function( req, res, next){
+app.get('/now', ( req, res, next) => {
   req.time = new Date().toString();
   next();
-}, function(req, res){
+}, (req, res) => {
   res.send({time: req.time});
 })
 
