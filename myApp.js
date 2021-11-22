@@ -8,6 +8,8 @@ mongoose.connect( process.env.MONGO_URI, () => {
   console.log("Connected :D")
 });
 
+const Person = require('./schema');
+
 app.use(function(req, res, next) {
   console.log(req.method + ' ' + req.path + ' - ' + req.ip);
   next();
