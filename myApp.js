@@ -4,7 +4,9 @@ require('dotenv').config();
 var app = express();
 const mongoose = require('mongoose');
 
-mongoose.connect( process.env.MONGO_URI);
+mongoose.connect( process.env.MONGO_URI, () => {
+  console.log("Connected :D")
+});
 
 app.use(function(req, res, next) {
   console.log(req.method + ' ' + req.path + ' - ' + req.ip);
